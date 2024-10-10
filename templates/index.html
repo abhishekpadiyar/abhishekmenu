@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet"
+    />
+  
+  </head>
+  <body>
+    <!-- START NAV -->
+
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="#projects">Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- END NAV -->
+
+    <!-- START WELCOME SECTION -->
+
+    <section id="welcome-section" class="welcome-section">
+      <h1>Hey I am Abhishek</h1>
+      <p>a Cloud Engineer</p>
+    </section>
+
+    <!-- END WELCOME SECTION -->
+
+    <!-- START PROJECTS SECTION -->
+
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header">These are some of my projects</h2>
+
+      <div class="projects-grid">
+        <a
+          href="{{ url_for('ec2') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://media.istockphoto.com/id/1549941737/photo/cloud-computing-concept-black-background-wide.jpg?b=1&s=612x612&w=0&k=20&c=l0cemt5v41kitEkpAuo9X0so9UXQQBGjmw2U73aSYeI="
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Open ec2 instance
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="{{ url_for('call_now') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://images.pexels.com/photos/594452/pexels-photo-594452.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Call
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="{{ url_for('docker') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://media.istockphoto.com/id/1312146469/photo/blue-hologram-of-cloud-in-office-interior-double-exposure.jpg?s=612x612&w=0&k=20&c=ktC3QLeH3Fo8gcGRNbQ7LDck7qC8x7Gqw7XCnksVmW8="
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            docker
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="{{ url_for('bulkmail') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://images.pexels.com/photos/5605061/pexels-photo-5605061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            bulkmail
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="{{ url_for('googles') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://images.pexels.com/photos/16564263/pexels-photo-16564263/free-photo-of-smart-phone-with-a-google-search-page-on-its-display.jpeg?auto=compress&cs=tinysrgb&w=600g"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Google Search
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a
+          href="{{ url_for('insta') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://img.freepik.com/premium-photo/instagram-logo-vector-illustration-transparent-background_1301911-53.jpg?size=626&ext=jpg&ga=GA1.1.1449788178.1711435061&semt=ais_hybrid"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Post on Instagram
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+      
+      <a
+      href="{{ url_for('livestream') }}"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://img.freepik.com/premium-vector/live-streaming-text-neon-sign-illustration_189374-267.jpg?ga=GA1.1.1449788178.1711435061&semt=ais_hybrid"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Livestream
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+
+    <a
+          href="{{ url_for('s3') }}"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-flat-silhouette-pictograms-big-cloud-storage-with-people-vector-illustration_1284-30499.jpg?ga=GA1.1.1449788178.1711435061&semt=ais_hybrid"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Launch s3 in AWS Cloud
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>     
+        <a
+        href="{{ url_for('sms_get') }}"
+        target="_blank"
+        class="project project-tile"
+      >
+        <img
+          class="project-image"
+            src="https://img.freepik.com/premium-vector/woman-sitting-chat-bubble-icon-chat-mobile-phone-telecommunication-concept_294791-880.jpg?ga=GA1.1.1449788178.1711435061&semt=ais_hybrid"
+          alt="project"
+        />
+        <p class="project-title">
+          <span class="code">&lt;</span>
+          Send SMS
+          <span class="code">&#47;&gt;</span>
+        </p>
+      </a> 
+
+      <a
+      href="{{ url_for('whatsapp') }}"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://img.freepik.com/premium-vector/green-white-phone-that-is-blue-background_575931-184.jpg?ga=GA1.1.1449788178.1711435061&semt=ais_hybrid"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Send whatsapp text
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a> 
+      
+  </div>
+
+
+      <a
+        href="{{ url_for('index') }}"
+        class="btn btn-show-all"
+        target="_blank"
+        >Show all<i class="fas fa-chevron-right"></i
+      ></a>
+    </section>
+
+    <!-- END PROJECTS SECTION -->
+
+    <!-- START CONTACT SECTION -->
+
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>Let's work together...</h2>
+        <p>How do you take your coffee?</p>
+      </div>
+      <div class="contact-links">
+
+        <a
+          id="profile-link"
+          href="https://github.com/abhishekpadiyar"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://www.linkedin.com/in/abhishek-singh-9a2183317/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-linkedin"></i> Linkedin</a
+        >
+        <a href="abhishekpadiyar2005@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a
+        >
+      </div>
+    </section>
+
+    <!-- END CONTACT SECTION -->
+
+    <!-- START FOOTER SECTION -->
+
+    <footer>
+      <p>
+        I hope to work together for the coming futute and grow ahead.
+      </p>
+
+    </footer>
+
+</html>

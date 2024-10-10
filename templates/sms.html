@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send SMS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        #card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input, textarea, button {
+            display: block;
+            width: calc(100% - 22px);
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #191970;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #191970;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <h2>Send SMS</h2>
+        <input type="text" id="recipient" placeholder="Recipient Phone Number" />
+        <textarea id="message" placeholder="Message Body"></textarea>
+        <button onclick="sendSMS()">Send SMS</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function sendSMS() {
+            const recipient = document.getElementById('recipient').value;
+            const message = document.getElementById('message').value;
+
+            if (!recipient || !message) {
+                document.getElementById('output').innerHTML = '<p>Please enter both recipient phone number and message body.</p>';
+                return;
+            }
+
+            fetch('http://localhost:80/send_sms', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ recipient, message })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        throw new Error(text);
+                    });
+                }
+            })
+            .then(data => {
+                const output = `
+                    <p><strong>Status:</strong> ${data.status}</p>
+                    <p><strong>Message:</strong> ${data.message}</p>
+                `;
+                document.getElementById('output').innerHTML = output;
+            })
+            .catch(error => {
+                document.getElementById('output').innerHTML = `<p>Error sending SMS: ${error.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
